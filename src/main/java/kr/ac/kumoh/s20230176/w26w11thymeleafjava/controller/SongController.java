@@ -14,10 +14,9 @@ public class SongController {
     @GetMapping("/songs/random")
     public String getRandomSong(Model model){
         model.addAttribute(
-                "songTitle",
+                "song",
                 service.getRandomSong()
-                        .map(Song::title)
-                        .orElse("노래 없음")
+                        .orElse(null)
         );
         return "random";
     }
