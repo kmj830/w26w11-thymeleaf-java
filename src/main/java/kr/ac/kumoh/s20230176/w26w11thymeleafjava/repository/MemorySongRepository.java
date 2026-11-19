@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public abstract class MemorySongRepository implements SongRepository {
+public class MemorySongRepository implements SongRepository {
     private final List<Song> songs = List.of(
             new Song(1, "Cosmic Echo", "NEBULA"),
             new Song(2, "Neon Fever", "SPARK"),
